@@ -31,5 +31,14 @@ The program will return all the words from a list that are anagrams of a multi-l
             }
         return $validate;
         }
+
+        function isAnagram($word, $comparison)
+        {
+            if (strpbrk($word, $comparison)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 ?>
