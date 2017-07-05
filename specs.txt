@@ -1,0 +1,7 @@
+Validation
+The program will reject invalid user input.
+
+Core Program Behavior
+The program will test whether a single-letter word is an anagram.
+
+The program will test whether a multi-letter word is an anagram.
