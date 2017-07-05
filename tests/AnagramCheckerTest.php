@@ -32,8 +32,8 @@ The program will return all the words from a list that are anagrams of a multi-l
         {
             //Arrange
             $test_AnagramChecker = new AnagramChecker;
-            $input = "a";
-            $comparison = "a";
+            $input = "bread";
+            $comparison = "beard";
             //Act
             $result = $test_AnagramChecker->isAnagram($input, $comparison);
             //Assert

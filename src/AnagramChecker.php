@@ -34,7 +34,11 @@ The program will return all the words from a list that are anagrams of a multi-l
 
         function isAnagram($word, $comparison)
         {
-            if (strpbrk($word, $comparison)) {
+            $split_word = str_split($word);
+            $split_comparison = str_split($comparison);
+            $sorted_word = sort($split_word);
+            $sorted_comparison = sort($split_comparison);
+            if ($sorted_word == $sorted_comparison) {
                 return true;
             } else {
                 return false;
