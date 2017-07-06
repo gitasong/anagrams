@@ -50,17 +50,34 @@ The program will return all the words from a list that are anagrams of a multi-l
             return $validate;
         }
 
+        // function isAnagram($word, $comparison)
+        // {
+        //     $split_word = str_split($word);
+        //     $split_comparison = str_split($comparison);
+        //     $sorted_word = sort($split_word);
+        //     $sorted_comparison = sort($split_comparison);
+        //     if ($sorted_word == $sorted_comparison) {
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // }
+
         function isAnagram($word, $comparison)
         {
-            $split_word = str_split($word);
-            $split_comparison = str_split($comparison);
-            $sorted_word = sort($split_word);
-            $sorted_comparison = sort($split_comparison);
-            if ($sorted_word == $sorted_comparison) {
-                return true;
-            } else {
-                return false;
+            // for each word in array, execute existing block
+            for ($item = 0; $item < sizeof($comparison); $item++) {
+                $split_word = str_split($word);
+                $split_item = str_split($item);
+                $sorted_word = sort($split_word);
+                $sorted_item = sort($split_item);
+                if ($sorted_word == $sorted_item) {
+                    $results = $comparison[$item];
+                } else {
+                    $results = false;
+                }
             }
+            return $results;
         }
     }
 ?>

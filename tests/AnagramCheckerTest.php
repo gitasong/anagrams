@@ -28,16 +28,28 @@ The program will return all the words from a list that are anagrams of a multi-l
             $this->assertEquals(false, $result);
         }
 
-        function test_isAnagram()
+        // function test_isAnagram()
+        // {
+        //     //Arrange
+        //     $test_AnagramChecker = new AnagramChecker;
+        //     $input = "bread";
+        //     $comparison = "beard";
+        //     //Act
+        //     $result = $test_AnagramChecker->isAnagram($input, $comparison);
+        //     //Assert
+        //     $this->assertEquals(true, $result);
+        // }
+
+        function test_isAnagram_array()
         {
             //Arrange
             $test_AnagramChecker = new AnagramChecker;
             $input = "bread";
-            $comparison = "beard";
+            $comparison = ["board", "bard", "drab", "beard"];
             //Act
             $result = $test_AnagramChecker->isAnagram($input, $comparison);
             //Assert
-            $this->assertEquals(true, $result);
+            $this->assertEquals("beard", $result);
         }
     }
 ?>
