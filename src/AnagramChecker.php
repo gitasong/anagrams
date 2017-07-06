@@ -67,14 +67,15 @@ The program will return all the words from a list that are anagrams of a multi-l
         {
             // for each word in array, execute existing block
             for ($item = 0; $item < sizeof($comparison); $item++) {
+                $results = [];
                 $split_word = str_split($word);
                 $split_item = str_split($item);
                 $sorted_word = sort($split_word);
                 $sorted_item = sort($split_item);
                 if ($sorted_word == $sorted_item) {
-                    $results = $comparison[$item];
+                    array_push($results, $comparison[$item]);
                 } else {
-                    $results = false;
+                    array_push($results, false);
                 }
             }
             return $results;

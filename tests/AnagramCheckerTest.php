@@ -45,11 +45,11 @@ The program will return all the words from a list that are anagrams of a multi-l
             //Arrange
             $test_AnagramChecker = new AnagramChecker;
             $input = "bread";
-            $comparison = ["board", "bard", "drab", "beard"];
+            $comparison = ["board", "bard", "drab", "beard", "bread"];
             //Act
             $result = $test_AnagramChecker->isAnagram($input, $comparison);
             //Assert
-            $this->assertEquals("beard", $result);
+            $this->assertEquals(["beard", "bread"], $result);
         }
     }
 ?>
