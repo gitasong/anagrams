@@ -14,22 +14,40 @@ The program will return all the words from a list that are anagrams of a multi-l
 <?php
     class AnagramChecker
     {
+        // function validate($word)
+        // {
+        //     if (empty($word)) {
+        //         $validate = false;
+        //     } else {
+        //         if (strpbrk($word," ")) {
+        //             $validate = false;
+        //         } else {
+        //             if (!(ctype_alpha($word))) {
+        //                 $validate = false;
+        //             } else {
+        //                 $validate = true;
+        //             }
+        //         }
+        //     }
+        // return $validate;
+        // }
+
+        // validate with switch-like sequence of ifs
         function validate($word)
         {
+            $validate = true;
             if (empty($word)) {
                 $validate = false;
-            } else {
-                if (strpbrk($word," ")) {
-                    $validate = false;
-                } else {
-                    if (!(ctype_alpha($word))) {
-                        $validate = false;
-                    } else {
-                        $validate = true;
-                    }
-                }
             }
-        return $validate;
+
+            if (strpbrk($word, " ")) {
+                $validate = false;
+            }
+
+            if (!(ctype_alpha($word))) {
+                $validate = false;
+            }
+            return $validate;
         }
 
         function isAnagram($word, $comparison)
