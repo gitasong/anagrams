@@ -6,7 +6,7 @@ The program will return true if a single word is an anagram of a single-letter w
 
 The program will return true if a single word is an anagram of a multi-letter word.
 
-The program will return all the words from a list that are anagrams of a single-letter word.
+The program will return one word from a list that is an anagram of a multi-letter word.
 
 The program will return all the words from a list that are anagrams of a multi-letter word. -->
 
